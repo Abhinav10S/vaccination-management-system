@@ -2,8 +2,11 @@ package com.example.vaccinationmanagementsystem.Models;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.springframework.cglib.core.Local;
 
 import java.sql.Time;
+import java.time.LocalTime;
+import java.util.Date;
 
 @Entity
 @Table(name="appointments")
@@ -14,9 +17,9 @@ public class Appointment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  int id ;
 
-    private Data appointmentDate ;
+    private Date appointmentDate ;
 
-    private Time appointmentTime ;
+    private LocalTime appointmentTime ;
 
     @ManyToOne
     @JoinColumn

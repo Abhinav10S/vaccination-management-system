@@ -29,6 +29,7 @@ public class VaccinationCenter {
     private LocalTime closingTime ;
 
     private int doseCapacity ;
+    private String address ;
 
     @OneToMany(mappedBy = "vaccinationCenter" , cascade = CascadeType.ALL)
     private List<Doctor> doctorList = new ArrayList<>() ;

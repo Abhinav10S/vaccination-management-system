@@ -2,9 +2,15 @@ package com.example.vaccinationmanagementsystem.Models;
 
 import com.example.vaccinationmanagementsystem.Enums.Gender;
 import jakarta.persistence.*;
+import lombok.Data;
+import org.springframework.aop.target.LazyInitTargetSource;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
+@Data
 public class User {
 
     @Id
@@ -81,4 +87,7 @@ public class User {
     public void setDose(Dose dose) {
         this.dose = dose;
     }
+    @OneToMany(mappedBy = "user" , cascade = CascadeType.ALL)
+    List<Appointment> appointmentList = new ArrayList<>() ;
+
 }
