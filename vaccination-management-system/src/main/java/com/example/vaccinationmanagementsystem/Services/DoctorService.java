@@ -22,10 +22,10 @@ public class DoctorService {
     @Autowired
     VaccinationCenterRepository centerRepository  ;
     public String addDoctor(Doctor doctor) throws EmailIdEmptyException , DoctorAlreadyExistException {
-      if (doctor.getEmailID()==null){
+      if (doctor.getEmailId()==null){
           throw new EmailIdEmptyException("EmailId Not Found");
       }
-        if(doctorRepository.findByEmailId(doctor.getEmailID())!= null){
+        if(doctorRepository.findByEmailId(doctor.getEmailId())!= null){
             throw new DoctorAlreadyExistException("Doctor with this emailId already exits.");
         }
 

@@ -15,68 +15,7 @@ import org.springframework.stereotype.Service;
 
 import javax.print.Doc;
 import java.util.Optional;
-//
-//@Service
-//public class AppointmentService {
-//    @Autowired
-//    AppointmentRepository appointmentRepository ;
-//    @Autowired
-//    DoctorRepository doctorRepository  ;
-//    @Autowired
-//    UserRepository userRepository ;
-//    public String bookAppointment(AppointmentReqDto appointmentReqDto) throws DoctorNotFound , UserNotFound {
-//         Optional<Doctor> doctorOptional = doctorRepository.findById(appointmentReqDto.getDocId());
-//         if(!doctorOptional.isPresent()){
-//             throw new DoctorNotFound("Doctor Not Found !") ;
-//         }
-//         Optional<User> userOptional = userRepository.findById(appointmentReqDto.getUserId());
-//         if (!userOptional.isPresent()){
-//             throw new UserNotFound("User Not Found !") ;
-//         }
-//
-//        Doctor doctor = doctorOptional.get();
-//        User user = userOptional.get();
-//
-//        Appointment appointment = new Appointment() ;
-//
-//        appointment.setAppointmentDate(appointmentReqDto.getAppointmentDate());
-//        appointment.setAppointmentTime(appointmentReqDto.getAppointmentTime());
-//
-//        appointment.setDoctor(doctor);
-//        appointment.setUser(user);
-//
-//        appointment = appointmentRepository.save(appointment);
-//
-//        doctor.getAppointmentList().add(appointment);
-//        user.getAppointmentList().add(appointment);
-//
-//        doctorRepository.save(doctor);
-//        userRepository.save(user);
-//
-//
-//        return "Appointment booked successfully";
-//    }
-//}
-//package com.example.vaccineManagement.Services;
-//
-//
-//import com.example.vaccineManagement.Dtos.RequestDtos.AppointmentReqDto;
-//import com.example.vaccineManagement.Enums.Gender;
-//import com.example.vaccineManagement.Exceptions.DoctorNotFound;
-//import com.example.vaccineManagement.Exceptions.UserNotFound;
-//import com.example.vaccineManagement.Models.Appointment;
-//import com.example.vaccineManagement.Models.Doctor;
-//import com.example.vaccineManagement.Models.User;
-//import com.example.vaccineManagement.Repository.AppointmentRepository;
-//import com.example.vaccineManagement.Repository.DoctorRepository;
-//import com.example.vaccineManagement.Repository.UserRepository;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.mail.SimpleMailMessage;
-//import org.springframework.mail.javamail.JavaMailSender;
-//import org.springframework.stereotype.Service;
-//
-//import java.util.List;
-//import java.util.Optional;
+
 
 @Service
 public class AppointmentService {

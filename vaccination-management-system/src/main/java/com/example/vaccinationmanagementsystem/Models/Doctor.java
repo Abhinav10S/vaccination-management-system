@@ -21,7 +21,7 @@ public class Doctor {
     @Enumerated(EnumType.STRING)
     private Gender gender ;
     @Column(unique = true)
-    private String emailID ;
+    private String emailId ;
 
     @ManyToOne
     @JoinColumn
@@ -33,12 +33,12 @@ public class Doctor {
     public Doctor() {
     }
 
-    public Doctor(int docId, String name, int age, Gender gender, String emailID, VaccinationCenter vaccinationCenter, List<Appointment> appointmentList) {
+    public Doctor(int docId, String name, int age, Gender gender, String emailId, VaccinationCenter vaccinationCenter, List<Appointment> appointmentList) {
         this.docId = docId;
         this.name = name;
         this.age = age;
         this.gender = gender;
-        this.emailID = emailID;
+        this.emailId = emailId;
         this.vaccinationCenter = vaccinationCenter;
         this.appointmentList = appointmentList;
     }
@@ -75,12 +75,12 @@ public class Doctor {
         this.gender = gender;
     }
 
-    public String getEmailID() {
-        return emailID;
+    public String getEmailId() {
+        return emailId;
     }
 
     public void setEmailID(String emailID) {
-        this.emailID = emailID;
+        this.emailId = emailId;
     }
 
     public VaccinationCenter getVaccinationCenter() {
