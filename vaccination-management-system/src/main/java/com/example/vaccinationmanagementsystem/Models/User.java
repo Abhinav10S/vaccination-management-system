@@ -1,6 +1,7 @@
 package com.example.vaccinationmanagementsystem.Models;
 
 import com.example.vaccinationmanagementsystem.Enums.Gender;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.aop.target.LazyInitTargetSource;
@@ -44,7 +45,7 @@ public class User {
 
     @Column(unique = true)
     private String emailId ;
-
+    @JsonIgnore
     @OneToOne(mappedBy = "user" , cascade = CascadeType.ALL)
     private Dose dose ;
 
@@ -87,6 +88,7 @@ public class User {
     public void setDose(Dose dose) {
         this.dose = dose;
     }
+    @JsonIgnore
     @OneToMany(mappedBy = "user" , cascade = CascadeType.ALL)
     List<Appointment> appointmentList = new ArrayList<>() ;
 

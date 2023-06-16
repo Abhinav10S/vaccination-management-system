@@ -1,5 +1,9 @@
 package com.example.vaccinationmanagementsystem.Dtos;
 
-public class UpdateEmailDto {
+import lombok.Data;
 
+@Data
+public class UpdateEmailDto {
+private int userId ;
+private String NewEmailId ;
 }

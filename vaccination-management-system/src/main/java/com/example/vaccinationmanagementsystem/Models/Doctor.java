@@ -1,6 +1,7 @@
 package com.example.vaccinationmanagementsystem.Models;
 
 import com.example.vaccinationmanagementsystem.Enums.Gender;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;

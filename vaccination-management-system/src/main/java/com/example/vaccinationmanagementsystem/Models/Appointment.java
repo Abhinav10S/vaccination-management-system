@@ -1,5 +1,6 @@
 package com.example.vaccinationmanagementsystem.Models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.cglib.core.Local;
@@ -21,10 +22,12 @@ public class Appointment {
 
     private LocalTime appointmentTime ;
 
+
     @ManyToOne
     @JoinColumn
     private Doctor doctor ;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn
     private User user ;
