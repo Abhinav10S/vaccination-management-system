@@ -23,6 +23,7 @@ public class User {
 
     private int age ;
 
+   // @Enumerated(EnumType.STRING)
     private Gender gender;
 
     private String mobileNo;
@@ -45,9 +46,6 @@ public class User {
 
     @Column(unique = true)
     private String emailId ;
-    @JsonIgnore
-    @OneToOne(mappedBy = "user" , cascade = CascadeType.ALL)
-    private Dose dose ;
 
     public int getUserId() {
         return userId;
@@ -88,6 +86,11 @@ public class User {
     public void setDose(Dose dose) {
         this.dose = dose;
     }
+    @JsonIgnore
+    @OneToOne(mappedBy = "user" , cascade = CascadeType.ALL)
+    private Dose dose ;
+
+
     @JsonIgnore
     @OneToMany(mappedBy = "user" , cascade = CascadeType.ALL)
     List<Appointment> appointmentList = new ArrayList<>() ;

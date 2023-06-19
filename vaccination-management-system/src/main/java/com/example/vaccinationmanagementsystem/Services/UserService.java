@@ -13,14 +13,12 @@ import java.util.Date;
 public class UserService {
     @Autowired
     UserRepository userRepository ;
-    public User addUser(User user) {
-       user.setGender(Gender.MALE);
-       System.out.println("The user is "+user);
-       user = userRepository.save(user);
-       return user ;
+    public String addUser(User user) {
+       userRepository.save(user);
+       return "user is added" ;
     }
 
-    public Date getVaccDate(Integer userId) {
+    public Date getVaccDate(int userId) {
         User user = userRepository.findById(userId).get();
         Dose dose = user.getDose();
 

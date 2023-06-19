@@ -16,12 +16,12 @@ public class UserController {
     UserService userService ;
 
     @PostMapping("/add")
-    public User addUser (@RequestBody User user){
+    public String addUser (@RequestBody User user){
         return userService.addUser(user) ;
     }
 
     @GetMapping("/getVaccinationDate")
-    public Date getVaccinationDate (@RequestParam("userId") Integer userId){
+    public Date getVaccinationDate (@RequestParam("userId") int userId){
         return userService.getVaccDate(userId);
     }
 
