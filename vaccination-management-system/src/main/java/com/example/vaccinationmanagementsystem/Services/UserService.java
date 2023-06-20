@@ -18,7 +18,7 @@ public class UserService {
        return "user is added" ;
     }
 
-    public Date getVaccDate(int userId) {
+    public Date getVaccDate(Integer userId) {
         User user = userRepository.findById(userId).get();
         Dose dose = user.getDose();
 

@@ -21,7 +21,7 @@ public class UserController {
     }
 
     @GetMapping("/getVaccinationDate")
-    public Date getVaccinationDate (@RequestParam("userId") int userId){
+    public Date getVaccinationDate (@RequestParam("userId") Integer userId){
         return userService.getVaccDate(userId);
     }
 

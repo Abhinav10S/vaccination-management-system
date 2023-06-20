@@ -26,4 +26,9 @@ public class DoseService {
 
         return "Dose Given to user successfully" ;
     }
+
+    public String addDose(Dose dose) {
+        doseRepository.save(dose);
+        return "Dose is added Successfully" ;
+    }
 }
